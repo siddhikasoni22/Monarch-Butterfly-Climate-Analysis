@@ -1,0 +1,158 @@
+ Monarch Butterfly Climate Analysis
+
+ Quantifying Regional Climate Warming Trends Through Multi-Decadal Changes in Monarch Butterfly Spring Migration Dates
+
+1. Project Overview
+
+This project analyses the relationship between regional spring temperature patterns and Monarch butterfly spring sightings over a period of 25 years (1996–2020).
+
+The main objective is to study long-term changes in spring Monarch butterfly sightings and investigate whether temperature variations are statistically associated with these changes.
+
+Python is used for data cleaning, statistical analysis, data visualization and report generation.
+
+ 2. Objectives
+
+- Analyse Monarch butterfly spring sightings from 1996 to 2020.
+- Clean and preprocess the historical dataset.
+- Identify yearly trends in spring sightings.
+- Analyse changes in the timing of adult Monarch sightings.
+- Study spring temperature patterns using NASA POWER data.
+- Calculate correlation and p-value between temperature and sightings.
+- Generate graphs and an Excel statistical report.
+
+3. Dataset Details
+
+**Monarch Butterfly Dataset:**
+- Source: University of Wisconsin–Madison / Journey North project dataset.
+- Coverage: 1996–2020.
+- Contains historical Monarch and milkweed observations.
+
+**Temperature Dataset:**
+- Source: NASA POWER API.
+- Variable: T2M (2-metre air temperature).
+- Period: 1996–2020.
+- Spring months: March, April and May.
+- Representative coordinates: Latitude 39°, Longitude -96°.
+
+ 4. Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- SciPy
+- Requests
+- OpenPyXL
+
+ 5. Project Structure
+
+```text
+Monarch-Butterfly-Climate-Analysis/
+│
+├── main.py
+├── src/
+│   └── analysis.py
+│
+├── data/
+│   └── monarch_dataset.csv
+│
+├── output/
+│   ├── graphs
+│   └── monarch_temperature_statistics.xlsx
+│
+├── requirements.txt
+└── README.md
+```
+
+ 6. Methodology
+
+1. Load the historical dataset using Pandas.
+2. Check missing values and remove duplicate records.
+3. Convert sighting dates into datetime format.
+4. Extract year and month from the dates.
+5. Filter spring observations (March–May).
+6. Calculate yearly spring sighting counts.
+7. Analyse median day-of-year for adult Monarch sightings.
+8. Retrieve spring temperature data from NASA POWER.
+9. Calculate Pearson correlation, p-value and linear regression.
+10. Generate visualizations and export statistical results to Excel.
+
+7. Key Results
+
+| Parameter | Result |
+|---|---:|
+| Study period | 1996–2020 |
+| Year vs. sightings correlation | 0.856 |
+| Average yearly increase | 202.48 sightings |
+| Temperature vs. sightings correlation | 0.093 |
+| Temperature vs. sightings p-value | 0.657366 |
+
+The analysis found a positive trend in recorded spring sightings over the study period. However, the correlation between representative spring temperature and yearly sightings was weak and not statistically significant.
+
+8. Visualizations
+
+The project generates five visualizations:
+
+1. Yearly spring Monarch sightings.
+2. Median day-of-year of adult Monarch sightings.
+3. Spring sightings across latitude-based regions.
+4. Yearly spring temperature trends.
+5. Relationship between spring temperature and sightings.
+
+ 9. How to Run the Project
+
+ Step 1: Clone the repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Step 2: Open the project folder
+
+```bash
+cd Monarch-Butterfly-Climate-Analysis
+```
+
+Step 3: Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+ Step 4: Run the project
+
+```bash
+python main.py
+```
+
+Generated graphs and the Excel report will be saved in the output folder.
+
+ 10. Limitations
+
+- Sightings represent reported observations, not the actual Monarch butterfly population.
+- Temperature data is taken from one representative coordinate and does not represent the exact temperature at every sighting location.
+- Reporting effort may vary across years.
+- Correlation does not establish causation.
+- The analysis does not prove that temperature alone determines migration timing.
+
+ 11. Future Scope
+
+- Include temperature data from multiple geographical locations.
+- Study additional environmental factors.
+- Use more advanced statistical and machine learning models.
+- Analyse migration timing across different regions.
+- Develop an interactive dashboard.
+
+ 12. Conclusion
+
+This project combines historical butterfly observations and regional spring temperature data to investigate long-term patterns in Monarch butterfly spring sightings.
+
+The analysis identifies an increasing trend in recorded sightings but does not find a statistically significant linear relationship between the selected temperature and sightings data.
+
+ 13. References
+
+- University of Wisconsin–Madison / Journey North Monarch and Milkweed dataset.
+- NASA POWER Data Access Viewer and API: https://power.larc.nasa.gov/
+- Pandas Documentation: https://pandas.pydata.org/docs/
+- Matplotlib Documentation: https://matplotlib.org/
+- SciPy Documentation: https://docs.scipy.org/
